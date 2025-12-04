@@ -20,7 +20,7 @@ Sebelum Menjalankan *Script*, Pastikan Anda Sudah Memenuhi Prasyarat Berikut Di 
 cd ~
 
 # Kloning Eepositori
-git clone [https://github.com/Lenwyy/Reverse-Proxy-Nginx.git](https://github.com/Lenwyy/Reverse-Proxy-Nginx.git)
+git clone https://github.com/Lenwyy/Reverse-Proxy-Nginx.git
 
 # Masuk Ke Direktori
 cd Reverse-Proxy-Nginx
