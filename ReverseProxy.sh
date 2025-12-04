@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Ubah Sesuai kebutuhan
-APP_DOMAIN="new.fromscratch.web.id" # Domain/Subdomain
+APP_DOMAIN="Domain/Subdomain" # Domain/Subdomain
 APP_PORT="4000"                     # PORT Tujuan
-APP_IP="151.240.0.110"              # IP VPS
+APP_IP="IP VPS"              # IP VPS
 NGINX_CONF="/etc/nginx/sites-available/$APP_DOMAIN"
 
 echo "--- Memulai Otomatisasi Reverse Proxy Untuk $APP_DOMAIN (Port $APP_PORT) ---"

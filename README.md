@@ -29,9 +29,9 @@ cd Reverse-Proxy-Nginx
 nano ReverseProxy.sh
 
 # Ubah Sesuai Kebutuhan
-APP_DOMAIN="nama-subdomain-baru.web.id" # Domain/Subdomain
-APP_PORT="PORT_APLIKASI"                # PORT Tujuan
-APP_IP="151.240.0.110"                  # IP VPS
+APP_DOMAIN="Domain/Subdomain" # Domain/Subdomain
+APP_PORT="PORT"                # PORT Tujuan
+APP_IP="IP VPS"                  # IP VPS
 # Beri Izin Eksekusi
 sudo chmod +x ReverseProxy.sh
 
