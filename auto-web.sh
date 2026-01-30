@@ -7,19 +7,12 @@ if [ -z "$DOMAIN" ]; then
   exit 1
 fi
 
-echo "=== SETUP WEBSITE $DOMAIN ==="
-
-# Install Apache + PHP
 sudo apt update
 sudo apt install apache2 php libapache2-mod-php -y
 
-# Buat folder website
 sudo mkdir -p /var/www/$DOMAIN
 sudo chown -R $USER:$USER /var/www/$DOMAIN
 
-# ==============================
-# Buat File index.php OTOMATIS
-# ==============================
 cat <<EOF > /var/www/$DOMAIN/index.php
 <?php
 \$domainName = "$DOMAIN";
@@ -60,9 +53,6 @@ cat <<EOF > /var/www/$DOMAIN/index.php
 </html>
 EOF
 
-# ==============================
-# Buat Config Apache
-# ==============================
 sudo bash -c "cat <<EOF > /etc/apache2/sites-available/$DOMAIN.conf
 <VirtualHost *:80>
     ServerName $DOMAIN.local
@@ -78,9 +68,7 @@ sudo bash -c "cat <<EOF > /etc/apache2/sites-available/$DOMAIN.conf
 </VirtualHost>
 EOF"
 
-# Aktifkan website
 sudo a2ensite $DOMAIN.conf
 sudo systemctl reload apache2
 
-echo "=== SELESAI ==="
 echo "Akses: http://$DOMAIN.local"
